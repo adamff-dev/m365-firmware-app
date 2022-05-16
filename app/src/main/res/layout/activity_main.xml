@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:theme="@style/AppTheme"
+        tools:context=".view.MainActivity">
+
+    <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="2dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="2dp"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+            <ToggleButton
+                    android:id="@+id/toggleHelp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:checked="false"
+                    android:textOff="@string/help_mode_off"
+                    android:textOn="@string/help_mode_on" />
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fadingEdge="horizontal"
+                        android:scrollbars="horizontal"
+                        tools:ignore="UselessParent">
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                        <Button
+                                android:id="@+id/buttonOriginal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/original_firmware"
+                                android:textColor="@color/orangeLevel"
+                                tools:ignore="ButtonStyle" />
+
+                        <Button
+                                android:id="@+id/buttonDyoc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/dyoc"
+                                android:textColor="@color/blueLevel"
+                                tools:ignore="ButtonStyle" />
+
+                        <Button
+                                android:id="@+id/buttonBotox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/botox"
+                                android:textColor="@color/blueLevel"
+                                tools:ignore="ButtonStyle" />
+
+                        <Button
+                                android:id="@+id/buttonChuru"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/churu"
+                                android:textColor="@color/blueLevel"
+                                tools:ignore="ButtonStyle" />
+
+                        <Button
+                                android:id="@+id/buttonRoller"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/rollerplausch"
+                                android:textColor="@color/blueLevel"
+                                tools:ignore="ButtonStyle" />
+
+                        <Button
+                                android:id="@+id/buttonCfw"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/cfw"
+                                android:textColor="@color/redLevel"
+                                tools:ignore="ButtonStyle" />
+
+                        <Button
+                                android:id="@+id/buttonCfw2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/cfw2"
+                                android:textColor="@color/redLevel"
+                                tools:ignore="ButtonStyle" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/textViewOrange"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/orange_code"
+                    android:textColor="@color/orangeLevel"
+                    android:visibility="gone" />
+
+            <TextView
+                    android:id="@+id/textViewBlue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/blue_code"
+                    android:textColor="@color/blueLevel"
+                    android:visibility="gone" />
+
+            <TextView
+                    android:id="@+id/textViewRed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/red_code"
+                    android:textColor="@color/redLevel"
+                    android:visibility="gone" />
+
+            <LinearLayout
+                    android:id="@+id/layoutFirmVersion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <TextView
+                        android:id="@+id/firmware"
+                        android:layout_width="200dp"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:justificationMode="inter_word"
+                        android:text="@string/base_firmware_description"
+                        android:textColor="#111111"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        tools:ignore="UnusedAttribute" />
+
+                <Spinner
+                        android:id="@+id/spinnerVersion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:entries="@array/version" />
+
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:justificationMode="inter_word"
+                    android:text="@string/recommended_version"
+                    android:visibility="gone"
+                    tools:ignore="UnusedAttribute" />
+
+            <LinearLayout
+                    android:id="@+id/layoutKers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <Switch
+                        android:id="@+id/sKersMinSpeed"
+                        android:layout_width="450dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/kers"
+                        android:textSize="14sp" />
+
+                <EditText
+                        android:id="@+id/etKersMinSpeed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:bufferType="spannable"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:importantForAutofill="no"
+                        android:inputType="numberDecimal"
+                        android:text="@string/kers_default"
+                        android:textAlignment="center"
+                        tools:ignore="LabelFor,RtlCompat,UnusedAttribute" />
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:text="@string/kers_min_speed_description"
+                    android:visibility="gone"
+                    tools:ignore="UnusedAttribute" />
+
+            <LinearLayout
+                    android:id="@+id/layoutNormalVel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <Switch
+                        android:id="@+id/sMaxNormal"
+                        android:layout_width="450dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:lines="2"
+                        android:text="@string/normal_max_speed_switch"
+                        android:textSize="14sp" />
+
+                <EditText
+                        android:id="@+id/etMaxNormal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:bufferType="spannable"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:text="@string/normal_max_speed_default"
+                        android:textAlignment="center"
+                        tools:ignore="LabelFor,RtlCompat,UnusedAttribute" />
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:text="@string/normal_max_speed_description"
+                    android:visibility="gone"
+                    tools:ignore="LabelFor,UnusedAttribute" />
+
+
+            <LinearLayout
+                    android:id="@+id/layoutEcoVel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <Switch
+                        android:id="@+id/sMaxEco"
+                        android:layout_width="450dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/eco_max_speed_switch"
+                        android:textSize="14sp" />
+
+                <EditText
+                        android:id="@+id/etMaxEco"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:bufferType="spannable"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:text="@string/eco_max_speed_default"
+                        android:textAlignment="center"
+                        tools:ignore="LabelFor,RtlCompat,UnusedAttribute" />
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:text="@string/eco_max_speed_description"
+                    android:visibility="gone"
+                    tools:ignore="LabelFor,UnusedAttribute" />
+
+
+            <LinearLayout
+                    android:id="@+id/layoutStartEngineVel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <Switch
+                        android:id="@+id/sStartSpeed"
+                        android:layout_width="450dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:lines="2"
+                        android:text="@string/motor_start_speed_switch"
+                        android:textSize="14sp" />
+
+                <EditText
+                        android:id="@+id/etStartSpeed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:bufferType="spannable"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:importantForAutofill="no"
+                        android:inputType="numberDecimal"
+                        android:text="@string/motor_start_speed_default"
+                        android:textAlignment="center"
+                        tools:ignore="LabelFor,RtlCompat,UnusedAttribute" />
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:text="@string/motor_start_speed_description"
+                    android:visibility="gone"
+                    tools:ignore="LabelFor,UnusedAttribute" />
+
+            <LinearLayout
+                    android:id="@+id/layoutEngineConst"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <Switch
+                        android:id="@+id/sPowerConstant"
+                        android:layout_width="450dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/motor_power_constant_switch" />
+
+                <EditText
+                        android:id="@+id/etPowerConstant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:bufferType="spannable"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:text="@string/motor_power_constant_default"
+                        android:textAlignment="center"
+                        tools:ignore="LabelFor,RtlCompat,UnusedAttribute" />
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:text="@string/motor_power_constant_description"
+                    android:visibility="gone"
+                    tools:ignore="LabelFor,UnusedAttribute" />
+
+            <LinearLayout
+                    android:id="@+id/layoutCruiseCtrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <Switch
+                        android:id="@+id/sCruiseDelay"
+                        android:layout_width="450dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/cruise_control_delay_switch"
+                        android:textSize="14sp" />
+
+                <EditText
+                        android:id="@+id/etCruiseDelay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:bufferType="spannable"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:importantForAutofill="no"
+                        android:inputType="numberDecimal"
+                        android:text="@string/cruise_control_delay_default"
+                        android:textAlignment="center"
+                        tools:ignore="LabelFor,RtlCompat,UnusedAttribute" />
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:text="@string/cruise_control_delay_description"
+                    android:visibility="gone"
+                    tools:ignore="LabelFor,UnusedAttribute" />
+
+            <LinearLayout
+                    android:id="@+id/layoutBatteryVoltage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <Switch
+                        android:id="@+id/sBatteryVoltage"
+                        android:layout_width="450dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="@string/battery_voltage" />
+
+                <EditText
+                        android:id="@+id/etBatteryVoltage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:bufferType="spannable"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:importantForAutofill="no"
+                        android:inputType="numberDecimal"
+                        android:text="@string/battery_voltage_default"
+                        android:textAlignment="center"
+                        tools:ignore="LabelFor,RtlCompat,UnusedAttribute" />
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:text="@string/voltage_limit_description"
+                    android:visibility="gone"
+                    tools:ignore="LabelFor,UnusedAttribute" />
+
+
+            <LinearLayout
+                    android:id="@+id/layoutWheelMulti"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal">
+
+                <Switch
+                        android:id="@+id/sWheelMulti"
+                        android:layout_width="450dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:lines="2"
+                        android:text="@string/wheel_speed_const_switch"
+                        android:textSize="14sp" />
+
+                <EditText
+                        android:id="@+id/etWheelMulti"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginBottom="5dp"
+                        android:layout_weight="1"
+                        android:bufferType="spannable"
+                        android:ems="10"
+                        android:enabled="false"
+                        android:importantForAutofill="no"
+                        android:inputType="number"
+                        android:text="@string/wheel_speed_const_default"
+                        android:textAlignment="center"
+                        tools:ignore="LabelFor,RtlCompat,UnusedAttribute" />
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/textView16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:justificationMode="inter_word"
+                    android:text="@string/wheel_speed_const_description"
+                    android:visibility="gone"
+                    tools:ignore="LabelFor,UnusedAttribute" />
+
+
+            <LinearLayout
+                    android:id="@+id/layoutBeep"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <Switch
+                        android:id="@+id/sCruiseNoBeep"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:lines="2"
+                        android:text="@string/cruise_control_nobeep_switch"
+                        android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:text="@string/cruise_control_nobeep_description"
+                    android:visibility="gone"
+                    tools:ignore="LabelFor,UnusedAttribute" />
+
+            <LinearLayout
+                    android:id="@+id/layoutEco"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <Switch
+                        android:id="@+id/sInstantMode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:lines="2"
+                        android:text="@string/instant_eco_switch_switch"
+                        android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:text="@string/instant_eco_switch_description"
+                    android:visibility="gone"
+                    tools:ignore="LabelFor,UnusedAttribute" />
+
+
+            <LinearLayout
+                    android:id="@+id/layoutEcoStartup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <Switch
+                        android:id="@+id/sBootEco"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:lines="2"
+                        android:text="@string/boot_with_eco_switch"
+                        android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:text="@string/boot_with_eco_description"
+                    android:visibility="gone"
+                    tools:ignore="LabelFor,UnusedAttribute" />
+
+
+            <LinearLayout
+                    android:id="@+id/layoutRussian"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <Switch
+                        android:id="@+id/sRussianThrottle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:lines="2"
+                        android:text="@string/russian_throttle_switch"
+                        android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:text="@string/russian_throttle_description"
+                    android:visibility="gone"
+                    tools:ignore="LabelFor,UnusedAttribute" />
+
+            <LinearLayout
+                    android:id="@+id/layoutLimit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <Switch
+                        android:id="@+id/sRemSpeedLimit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:lines="2"
+                        android:text="@string/remove_hard_speed_limit_switch"
+                        android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:text="@string/remove_hard_speed_limit_description"
+                    android:visibility="gone"
+                    tools:ignore="LabelFor,UnusedAttribute" />
+
+            <LinearLayout
+                    android:id="@+id/layoutDelChargeMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <Switch
+                        android:id="@+id/sRemChargingMode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:lines="2"
+                        android:text="@string/remove_charging_mode_switch"
+                        android:textSize="14sp" />
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:text="@string/remove_charging_mode_description"
+                    android:visibility="gone"
+                    tools:ignore="LabelFor,UnusedAttribute" />
+
+
+            <LinearLayout
+                    android:id="@+id/layoutBms"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <Switch
+                        android:id="@+id/sChangeEscBms"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:lines="2"
+                        android:text="@string/bms_uart_76800_switch"
+                        android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:text="@string/bms_uart_76800_description"
+                    android:visibility="gone"
+                    tools:ignore="LabelFor,UnusedAttribute" />
+
+            <EditText
+                    android:id="@+id/etFileName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/save_as_button"
+                    android:inputType="textFilter|textNoSuggestions"
+                    tools:ignore="Autofill" />
+
+            <Button
+                    android:id="@+id/buttonDownload"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/download_button" />
+
+            <Button
+                    android:id="@+id/buttonShare"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:text="@string/share_button" />
+
+            <Button
+                    android:id="@+id/buttonDowngrade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/abrir_m365_downg" />
+
+            <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:justificationMode="inter_word"
+                    android:text="@string/about_app"
+                    tools:ignore="LabelFor,UnusedAttribute" />
+        </LinearLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="21dp"
+            tools:ignore="TooManyViews" />
+</androidx.constraintlayout.widget.ConstraintLayout>

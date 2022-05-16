@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name" translatable="false">M365 Firmware</string>
+    <string name="developer" translatable="false">adamff24</string>
+    <string name="help_mode_on">Modo ayuda activado</string>
+    <string name="help_mode_off">Modo ayuda desactivado</string>
+    <string name="original_firmware">Firmware original</string>
+    <string name="orange_code">Naranja: constante de motor de origen</string>
+    <string name="blue_code">Azul: por encima de la constante recomendada</string>
+    <string name="red_code">Rojo: por debajo de la constante recomendada</string>
+    <string name="base_firmware_description">Firmware base:</string>
+    <string name="recommended_version">Se recomienda 1.3.8, proporciona una experiencia de conducción mucho más suave. En cualquier caso realice sus propias pruebas con las bases firmware disponibles para modificar y así obtener sus propias conclusiones.</string>
+    <string name="kers" translatable="false">KERS</string>
+    <string name="kers_min_speed_description">Velocidad en km/h en la que el patín comenzará a frenar por sí solo cuando el motor no esté acelerando / el freno motor se activa cuando no estás apretando el gatillo de aceleración por encima de la velocidad en km/h que indiques en esta opción.</string>
+    <string name="dyoc" translatable="false">DYoC</string>
+    <string name="botox" translatable="false">BotoX</string>
+    <string name="churu" translatable="false">Churu01</string>
+    <string name="rollerplausch" translatable="false">Rollerplausch</string>
+    <string name="cfw" translatable="false">CFW W</string>
+    <string name="cfw2" translatable="false">CFW 2.0</string>
+    <string name="kers_default" translatable="false">6</string>
+    <string name="normal_max_speed_default" translatable="false">28</string>
+    <string name="normal_max_speed_switch">Velocidad máxima en modo NORMAL</string>
+    <string name="normal_max_speed_description">Velocidad máxima del patín en modo NORMAL.</string>
+    <string name="eco_max_speed_switch">Velocidad máxima en modo ECO</string>
+    <string name="eco_max_speed_default" translatable="false">22</string>
+    <string name="eco_max_speed_description">El patin permanecerá por debajo de esta velocidad en modo ECO.</string>
+    <string name="motor_start_speed_switch">Velocidad para iniciar motor</string>
+    <string name="motor_start_speed_default" translatable="false">5</string>
+    <string name="motor_start_speed_description">Velocidad mínima en km/h antes de que arranque el motor.</string>
+    <string name="motor_power_constant_switch">Constante del motor</string>
+    <string name="motor_power_constant_default" translatable="false">51575</string>
+    <string name="motor_power_constant_description">Más bajo = Más potencia. Demasiada potencia no se recomienda para la duración de la batería, permanezca por ENCIMA de la constante potencia de motor 32000.</string>
+    <string name="cruise_control_delay_switch">Retardo del control crucero</string>
+    <string name="cruise_control_delay_default" translatable="false">5</string>
+    <string name="cruise_control_delay_description">"Cuántos segundos tardará el control de crucero en activarse. "</string>
+    <string name="cruise_control_nobeep_switch">Desactivar BEEP en modo crucero</string>
+    <string name="cruise_control_nobeep_description">Desactivar sonido \'beep\' al activar modo crucero</string>
+    <string name="instant_eco_switch_switch">Cambio instantáneo a ECO</string>
+    <string name="instant_eco_switch_description">El patín cambiará al instante entre ECO y el modo Normal mientras conduce.</string>
+    <string name="boot_with_eco_switch">Arranque en modo ECO</string>
+    <string name="boot_with_eco_description">El patin siempre encenderá en modo ECO.</string>
+    <string name="russian_throttle_switch">Acelerador ruso</string>
+    <string name="russian_throttle_description">Cambia el algoritmo de aceleración del control de velocidad al control de potencia.</string>
+    <string name="voltage_limit_switch">Límite de voltaje de batería</string>
+    <string name="voltage_limit_default" translatable="false">43.01</string>
+    <string name="voltage_limit_description">Si desea conectar una batería personalizada con un voltaje más alto.</string>
+    <string name="remove_hard_speed_limit_switch">Eliminar límite velocidad de 35 km/h</string>
+    <string name="remove_hard_speed_limit_description">Elimina el código que verífica que la velocidad sea inferior a 34,78 km/h (12000/345). Necesario batería 12s lipo que ayude al batería original a pasar de los 50,4v o como mínimo batería extra que ayude a la de origen a superar los 50,4v.</string>
+    <string name="remove_charging_mode_switch">Eliminar modo de carga</string>
+    <string name="remove_charging_mode_description">Soluciona el problema del patín al entrar en modo de carga con una batería externa conectada en paralelo.</string>
+    <string name="bms_uart_76800_switch">Cambiar ESC - BMS baud rate a 76800:</string>
+    <string name="bms_uart_76800_description">Solo si utilizas BMS de código abierto compatible!</string>
+    <string name="wheel_speed_const_switch">Multiplicador de la velocidad de la rueda</string>
+    <string name="wheel_speed_const_default" translatable="false">345</string>
+    <string name="wheel_speed_const_description">Solo si tu patín tiene neumáticos de 10 use 315, no active esta opción si tiene neumáticos de 8,5.</string>
+    <string name="save_as_button">Guardar como… (opcional)</string>
+    <string name="download_button">Descargar Firmware</string>
+    <string name="share_button">Compartir Firmware</string>
+    <string name="about_app">Revisa los parámetros seleccionados antes de descargar el firmware. Eres responsable de los parámetros seleccionados. La app ha sido creada por adam24_exe, basada en la web m365.botox.bz. Use la app \"M365 DownG\", de CamiAlfa, para cargar el firmware generado por esta app. Para más información, visite hackm365.com.</string>
+    <string name="max">Máx:</string>
+    <string name="battery_voltage">Límite de voltaje de la batería</string>
+    <string name="battery_voltage_default" translatable="false">43.01</string>
+    <string name="clipboard_success">El enlace de descarga ha sido copiado al portapapeles</string>
+    <string name="permission_denied">Has denegado los permisos. Los necesito para guardar el archivo en tu dispositivo.</string>
+    <string name="abrir_m365_downg">Abrir M365 DownG</string>
+</resources>
