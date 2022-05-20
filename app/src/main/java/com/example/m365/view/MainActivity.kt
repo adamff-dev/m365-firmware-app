@@ -320,6 +320,8 @@ class MainActivity : AppCompatActivity() {
      * o un String vacío para dejar que la función le asigne un nombre automáticamente
      */
     private fun startDownload(downloadUrl: String, fileName: String) {
+        showToast("Descargando firmware...")
+
         var fn = fileName
         if (downloadUrl.isEmpty()) return
 

@@ -2,7 +2,7 @@ package com.example.m365.model
 
 object Constants {
     const val STORAGE_PERMISSION_CODE = 1000
-    const val BASE_URL = "https://m365.botox.bz/cfw?version=DRV"
+    const val BASE_URL = "https://m365.botox.bz?version=DRV"
     const val DOWNG_PACKAGE = "com.m365downgrade"
 
     val FIRM_ORIGINAL = arrayOf(
@@ -154,7 +154,7 @@ object Constants {
         false,   // cambio inst. ECO
         false,   // ECO startup
         true,  // Russian
-        false,   // Eliminar límite vel.
+        true,   // Eliminar límite vel.
         false,   // Eliminar modo carga
         false,  // ESC - BMS
         "46.3",   // kers
@@ -181,7 +181,7 @@ object Constants {
         false,   // cambio inst. ECO
         false,   // ECO startup
         true,  // Russian
-        false,   // Eliminar límite vel.
+        true,   // Eliminar límite vel.
         false,   // Eliminar modo carga
         false,  // ESC - BMS
         "46.3",   // kers
