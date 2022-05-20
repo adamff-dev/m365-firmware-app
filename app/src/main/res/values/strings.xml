@@ -56,7 +56,7 @@
     <string name="save_as_button">Guardar como… (opcional)</string>
     <string name="download_button">Descargar Firmware</string>
     <string name="share_button">Compartir Firmware</string>
-    <string name="about_app">Revisa los parámetros seleccionados antes de descargar el firmware. Eres responsable de los parámetros seleccionados. La app ha sido creada por adam24_exe, basada en la web m365.botox.bz. Use la app \"M365 DownG\", de CamiAlfa, para cargar el firmware generado por esta app. Para más información, visite hackm365.com.</string>
+    <string name="about_app">Revise los parámetros seleccionados antes de descargar.\nEsta app ha sido desarroyada por adamff24.</string>
     <string name="max">Máx:</string>
     <string name="battery_voltage">Límite de voltaje de la batería</string>
     <string name="battery_voltage_default" translatable="false">43.01</string>
